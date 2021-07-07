@@ -31,6 +31,10 @@
 body {
   color: white;
   font-family: "Inter";
+  background-color: var(--light-gray);
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
 }
 
 h2 {
