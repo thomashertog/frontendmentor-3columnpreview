@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("fonts/lexend.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Big Shoulders";
+  src: url("fonts/shoulders.ttf") format("truetype");
+}
+
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --dark-cyan: hsl(179, 100%, 13%);
+  --white: hsla(0, 0%, 100%, .75);
+  --light-gray: hsl(0, 0%, 95%);
+}
+
+.screenreader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+body {
+  color: white;
+  font-family: "Inter";
+}
+
+h2 {
+  margin: 0;
+  font-size: 2em;
+}
+
+a {
+  text-decoration: none;
+  border-radius: 3em;
+  padding: 1em 2em;
+  background-color: white;
+  color: var(--section-color);
+  border: 1px solid white;
+  font-weight: bold;
+  margin-top: 5em;
+}
+
+a:hover {
+  color: white;
+  border: 1px solid currentColor;
+  background-color: var(--section-color);
+}
+
+header {
+  font-family: "Big Shoulders";
+}
+
+section {
+  --section-color: var(--cyan);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--section-color);
+  color: var(--white);
+  align-items: flex-start;
+  padding: 3em;
+  gap: 1.5em;
+}
+
+section:first-child {
+  --section-color: var(--orange);
+  border-radius: 1em 1em 0 0;
+}
+
+section:last-child {
+  --section-color: var(--dark-cyan);
+  border-radius: 0 0 1em 1em;
+}
+
+@media screen and (min-width: 50rem) {
+  main {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 75rem;
+  }
+  section:first-child {
+    border-radius: 1em 0 0 1em;
+  }
+  section:last-child {
+    border-radius: 0 1em 1em 0;
+  }
+}
